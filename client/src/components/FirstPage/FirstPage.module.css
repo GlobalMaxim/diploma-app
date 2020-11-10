@@ -1,0 +1,9 @@
+.FirstPage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.active {
+    color: red
+}

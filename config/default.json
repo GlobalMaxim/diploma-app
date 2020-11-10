@@ -1,0 +1,6 @@
+{
+    "port": 5000,
+    "mongoUri": "mongodb+srv://maxim:qwerty1998@cluster0.rir75.mongodb.net/diploma-app?retryWrites=true&w=majority",
+    "jwtSecret": "Secret key for project"
+
+}  
