@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./Button.module.css";
 
 const Button = (props) => {
   const { CurrentButtonState, SetCurrentButtonState, id } = props;
-  const cls = [classes.Button, classes[props.type]];
-  const [ButtonValue, SetButtonValue] = useState(2);
+  // const cls = [classes.Button, classes[props.type]];
 
   const onClick = (e) => {
     SetCurrentButtonState({

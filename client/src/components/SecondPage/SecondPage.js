@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Select from "../../UI/Select/Select";
-import Button from "../../UI/Button/Button";
-import classes from "./SecondPage.module.css";
+// import classes from "./SecondPage.module.css";
+import { NavLink } from "react-router-dom";
 
-const SecondPage = (props) => {
+const SecondPage = () => {
   const [form, setForm] = useState({
     q1: "1",
     q2: "1",
     q3: "1",
     q4: "1",
   });
-  const { CurrentButtonState } = props;
-  console.log(CurrentButtonState);
   const handleButton = () => {
-    setForm({ ...form, [`firstQuestion`]: CurrentButtonState });
     console.log(form);
   };
 
@@ -45,14 +42,16 @@ const SecondPage = (props) => {
           id={4}
         />
         <div style={{ textAlign: "center" }}>
-          <button
-            type="button"
-            className="btn btn-primary"
-            onClick={handleButton}
-            style={{width: "50%"}}
-          >
-            Далее
-          </button>
+          <NavLink to={'/third-page'}>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={handleButton}
+              style={{ width: "50%" }}
+            >
+              Далее
+            </button>
+          </NavLink>
         </div>
       </div>
     </div>

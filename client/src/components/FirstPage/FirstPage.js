@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import classes from "../FirstPage/FirstPage.module.css";
 import Button from "../../UI/Button/Button";
 import { NavLink } from "react-router-dom";
@@ -11,8 +11,8 @@ const FirstPage = () => {
     quest4: "",
   });
 
-  const cls = [classes.FirstPage];
-  console.log(CurrentButtonState);
+  // const cls = [classes.FirstPage];
+  
   // const handleButton = (e) => {
   //   if (e.target.id === "1") {
   //     SetCurrentButtonState(1);
@@ -26,7 +26,9 @@ const FirstPage = () => {
   //   }
   // };
 
-  const moveToNextPage = () => {};
+  const handleButton = () => {
+    console.log(CurrentButtonState);
+  };
 
   const showMain = () => {
     return (
@@ -66,12 +68,11 @@ const FirstPage = () => {
               <div style={{ textAlign: "center" }}>
                 <NavLink
                   to={"/second-page"}
-                  CurrentButtonState={CurrentButtonState}
                 >
                   <button
                     type="primary"
                     disabled={!CurrentButtonState}
-                    onClick={moveToNextPage}
+                    onClick={handleButton}
                     className="btn btn-primary"
                     style={{width: "50%", marginTop: 10}}
                   >
