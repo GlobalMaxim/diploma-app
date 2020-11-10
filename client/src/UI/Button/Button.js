@@ -31,6 +31,7 @@ const Button = (props) => {
           disabled={props.disabled}
           id={`id${props.id}` + "+2"}
           value="2"
+          style={{marginLeft: 3, marginRight: 3}}
         >
           Нормально
         </button>

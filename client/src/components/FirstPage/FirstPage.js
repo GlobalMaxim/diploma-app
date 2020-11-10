@@ -74,7 +74,7 @@ const FirstPage = () => {
                     disabled={!CurrentButtonState}
                     onClick={handleButton}
                     className="btn btn-primary"
-                    style={{width: "50%", marginTop: 10}}
+                    style={{width: 150, marginTop: 10}}
                   >
                     Далее
                   </button>

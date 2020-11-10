@@ -7,13 +7,17 @@ const Select = (props) => {
   const handleChange = (e) => {
     e.preventDefault();
     setValue(e.target.value);
-    setForm({...form, [`q${id}`] : e.target.value})
+    setForm({ ...form, [`q${id}`]: e.target.value });
   };
 
   return (
-    <form style={{marginTop: 10}}>
+    <form style={{ marginTop: 10 }}>
       <label>
-        <select value={value} onChange={handleChange} style={{marginRight: 10}}>
+        <select
+          value={value}
+          onChange={handleChange}
+          style={{ marginRight: 10 }}
+        >
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -25,7 +29,7 @@ const Select = (props) => {
           <option value="9">9</option>
           <option value="10">10</option>
         </select>
-        {label }
+        {label}
       </label>
     </form>
   );

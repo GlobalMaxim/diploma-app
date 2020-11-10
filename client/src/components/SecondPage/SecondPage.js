@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import Select from "../../UI/Select/Select";
 // import classes from "./SecondPage.module.css";
 import { NavLink } from "react-router-dom";
@@ -15,43 +15,45 @@ const SecondPage = () => {
   };
 
   return (
-    <div className="row">
-      <div className="col-12 justify-content-center">
-        <Select
-          label="Оцініть рівень цікавості заняття"
-          setForm={setForm}
-          form={form}
-          id={1}
-        />
-        <Select
-          label="Оцініть рівень актуальності заняття"
-          setForm={setForm}
-          form={form}
-          id={2}
-        />
-        <Select
-          label="Оцініть рівень практичної користі заняття"
-          setForm={setForm}
-          form={form}
-          id={3}
-        />
-        <Select
-          label="Оцініть загальний рівень заняття"
-          setForm={setForm}
-          form={form}
-          id={4}
-        />
-        <div style={{ textAlign: "center" }}>
-          <NavLink to={'/third-page'}>
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={handleButton}
-              style={{ width: "50%" }}
-            >
-              Далее
-            </button>
-          </NavLink>
+    <div className="row justify-content-center" style={{ textAlign: "center" }}>
+      <div className="col-lg-5 col-sm-12 " >
+        <div style={{ textAlign: "left", maxWidth: 380 }}>
+          <Select
+            label="Оцініть рівень цікавості заняття"
+            setForm={setForm}
+            form={form}
+            id={1}
+          />
+          <Select
+            label="Оцініть рівень актуальності заняття"
+            setForm={setForm}
+            form={form}
+            id={2}
+          />
+          <Select
+            label="Оцініть рівень практичної користі заняття"
+            setForm={setForm}
+            form={form}
+            id={3}
+          />
+          <Select
+            label="Оцініть загальний рівень заняття"
+            setForm={setForm}
+            form={form}
+            id={4}
+          />
+          <div style={{ textAlign: "center" }}>
+            <NavLink to={"/third-page"}>
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={handleButton}
+                style={{ width: "50%" }}
+              >
+                Далее
+              </button>
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>
